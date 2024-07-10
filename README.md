@@ -7,7 +7,7 @@ To run this program, you can use Remix, an online Solidity IDE. To get started, 
 
 Further steps,
 
-- Create a file named VoteIntegrity.sol and  write code into it and after that compile it.
+- Create a file named FairElectiom.sol and  write code into it and after that compile it.
 - After compiling the file proceed  to the deploy section and deploy it.
 - Now we can see that addvoter, cast vote, register voter,candidatevotes,countvotes and registeredvoters are visible there.
 - several statements like require, revert, and assert are used to verify that the voting requirements are met.
