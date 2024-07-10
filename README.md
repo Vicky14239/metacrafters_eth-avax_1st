@@ -16,11 +16,11 @@ Further steps,
 - registeredVoters (mapping(address => bool)): Keeps track of registered voters.
 - candidateVotes (mapping(string => uint256)): Keeps track of the votes each candidate has received.
 # Functions
-1.addVoter(address voter) public
+1. addVoter(address voter) public
 - This function registers a voter. It uses the require statement to ensure that the voter is not already registered.
-2.castVote(string memory candidate) public
+2. castVote(string memory candidate) public
 - This function allows a registered voter to vote for a candidate. It uses the require statement to ensure that the voter is registered, and it reverts the transaction with an error message if the candidate name is empty.
-3.countVotes(string memory candidate) public view returns (uint256)
+3. countVotes(string memory candidate) public view returns (uint256)
 -This function returns the number of votes a candidate has received. It uses the assert statement to ensure that the number of votes is non-negative.
 # Project By
 - VICKY KUMAR
