@@ -11,5 +11,19 @@ Further steps,
 - After compiling the file proceed  to the deploy section and deploy it.
 - Now we can see that vote, votes, register voter and voters are visible there.
 - several statements like require, revert, and assert are used to verify that the voting requirements are met.
+# Contract Details
+# state variables
+- voters (mapping(address => bool)): Keeps track of registered voters.
+- votes (mapping(string => uint256)): Keeps track of the votes each candidate has received.
+# Functions
+- registerVoter(address voter) public
+This function registers a voter. It uses the require statement to ensure that the voter is not already registered
+- vote(string memory candidate) public
+This function allows a registered voter to vote for a candidate. It uses the require statement to ensure that the voter is registered, and it reverts the transaction with an error message if the candidate name is empty
+- getVotes(string memory candidate) public view returns (uint256)
+This function returns the number of votes a candidate has received. It uses the assert statement to ensure that the number of votes is non-negative.
+# Project By
+- VICKY KUMAr
+
 
 
