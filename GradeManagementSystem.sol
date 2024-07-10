@@ -23,13 +23,13 @@ contract GradeManagementSystem {
 
     // Function to validate grade is within the valid range using require
     function checkGrade(uint grade) public pure returns (bool) {
-        require(grade <= 100 && grade >= 0, "Grade must be in the range 0-100");
+        require(grade <= 100 && grade >= 0, "Grade should be from 0-100");
         return true;
     }
 
     // Function to register student with grade checks using require, assert, and revert
     function registerStudentWithValidation(uint grade) public returns (uint) {
-        require(grade <= 100 && grade >= 0, "Grade must be in the range 0-100");
+        require(grade <= 100 && grade >= 0, "Grade should be between 0-100");
 
         // Assert to confirm the grade is valid
         assert(grade <= 100 && grade >= 0);
