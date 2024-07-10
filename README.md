@@ -1,7 +1,7 @@
 # Functions and Errors
-# Voting System:- A Simple Contract to vote for candidates 
+# Election System:- A Simple Contract to vote for candidates 
 # Description 
-The Voting smart contract provides functionality for voter registration, voting, and retrieving vote counts for candidates. Error handling is implemented using require, revert, and assert to ensure the contract behaves correctly and securely.The smart contract ensures that only registered voters can cast votes and handles various edge cases to maintain the integrity of the voting process.
+The Electiom smart contract provides functionality for voter registration, voting, and retrieving vote counts for candidates. Error handling is implemented using require, revert, and assert to ensure the contract behaves correctly and securely.The smart contract ensures that only registered voters can cast votes and handles various edge cases to maintain the integrity of the voting process.
 # Execution
 To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
 
