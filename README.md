@@ -7,9 +7,9 @@ To run this program, you can use Remix, an online Solidity IDE. To get started, 
 
 Further steps,
 
-- Create a file named VoteIntegrity.sol, write code into it, and then compile it.
-- After compiling the file go to the deploy section and deploy it.
-- Now, we can see  vote, votes, register voter and voters buttons there.
-- Various statements such as require, revert and assert are applied there to check the required criteria of voting.
+- Create a file named VoteIntegrity.sol and  write code into it and after that compile it.
+- After compiling the file proceed  to the deploy section and deploy it.
+- Now we can see that vote, votes, register voter and voters are visible there.
+- several statements like require, revert, and assert are used to verify that the voting requirements are met.
 
 
