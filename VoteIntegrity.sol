@@ -1,46 +1,31 @@
-
 // SPDX-License-Identifier: MIT
 
-pragma solidity 0.8.26;
+pragma solidity ^0.8.0;
 
-contract GradeManagementSystem {
-    // This contract will manage student grades and grade range is 0-100
-    
-    uint public totalStudents = 0;
+contract Voting {
+    mapping(address => bool) public voters;
+    mapping(string => uint256) public votes;
 
-    // Function to verify grade is within the valid range
-    function verifyGrade(uint grade) public pure {
-        assert(grade <= 100 && grade >= 0);
+
+    function registerVoter(address voter) public {
+        require(!voters[voter], "Voter is already registered");
+        voters[voter] = true;
     }
 
-    // Function to increase student count if grade is valid using revert
-    function registerStudent(uint grade) public returns (uint) {
-        if (grade > 100 || grade < 0) {
-            revert("Invalid grade provided");
-        }
-        totalStudents += 1;
-        return totalStudents;
-    }
+    function vote(string memory candidate) public {
+        require(voters[msg.sender], "You must be a registered voter");
 
-    // Function to validate grade is within the valid range using require
-    function checkGrade(uint grade) public pure returns (bool) {
-        require(grade <= 100 && grade >= 0, "Grade should be from 0-100");
-        return true;
-    }
-
-    // Function to register student with grade checks using require, assert, and revert
-    function registerStudentWithValidation(uint grade) public returns (uint) {
-        require(grade <= 100 && grade >= 0, "Grade should be between 0-100");
-
-        // Assert to confirm the grade is valid
-        assert(grade <= 100 && grade >= 0);
-
-        // Revert if grade is invalid (this is redundant but added for illustration)
-        if (grade > 100 || grade < 0) {
-            revert("Invalid grade provided");
+        // Revert if the candidate name is empty
+        if (bytes(candidate).length == 0) {
+            revert("Invalid candidate name");
         }
 
-        totalStudents += 1;
-        return totalStudents;
+        votes[candidate]++;
+    }
+
+
+    function getVotes(string memory candidate) public view returns (uint256) {
+        assert(votes[candidate] >= 0);
+        return votes[candidate];
     }
 }
