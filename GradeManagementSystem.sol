@@ -3,8 +3,8 @@
 pragma solidity 0.8.26;
 
 contract GradeManagementSystem {
-    // This contract will manage student grades
-    // Valid grade range is 0-100
+    // This contract will manage student grades and grade range is 0-100
+    
     uint public totalStudents = 0;
 
     // Function to verify grade is within the valid range
