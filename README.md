@@ -8,6 +8,10 @@ The GradeManagementSystem is a Solidity smart contract designed to manage and va
 # Functions
 - verifyGrade(uint grade) public pure
 This function checks if a given grade is within the valid range (0 to 100) using the assert statement.
+function verifyGrade(uint grade) public pure {
+    assert(grade >= 0 && grade <= 100);
+}
+
 - registerStudent(uint grade) public returns (uint)
 This function increments the totalStudents count if the provided grade is valid. If the grade is not valid, it reverts the transaction with an error message.
 - checkGrade(uint grade) public pure returns (bool)
