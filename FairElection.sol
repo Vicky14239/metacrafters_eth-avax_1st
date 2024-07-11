@@ -14,7 +14,6 @@ contract Election {
     function castVote(string memory candidate) public {
         require(registeredVoters[msg.sender], "You must be a registered voter");
 
-        // Revert if the candidate name is empty
         if (bytes(candidate).length == 0) {
             revert("Invalid candidate name");
         }
